@@ -298,7 +298,7 @@ def prep_test_train(agg_games_df):
     train_df = agg_games_df[agg_games_df.result.notna()]
     train_df = train_df[train_df.win_perc_dif.notna()]
     #tail length should be number of games this week
-    test_df = agg_games_df.tail(14)
+    test_df = agg_games_df.tail(15)
     return test_df, train_df
 
 def main():
