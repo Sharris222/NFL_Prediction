@@ -221,7 +221,7 @@ def get_elo():
            'qb1_game_value', 'qb2_game_value', 'qb1_value_post', 'qb2_value_post',
            'qbelo1_post', 'qbelo2_post', 'score1', 'score2', 'importance', 'total_rating'])
     elo_df.date = pd.to_datetime(elo_df.date)
-    elo_df = elo_df[elo_df.date < '10-27-2022']
+    elo_df = elo_df[elo_df.date < '11-03-2022']
 
     elo_df['team1'] = elo_df['team1'].replace(['KC', 'JAX', 'CAR', 'BAL', 'BUF', 'MIN', 'DET', 'ATL', 'NE', 'WSH',
            'CIN', 'NO', 'SF', 'LAR', 'NYG', 'DEN', 'CLE', 'IND', 'TEN', 'NYJ',
@@ -313,7 +313,7 @@ def main():
 
     #current year data to train with
     #need to change current week every week
-    current_week = 7
+    current_week = 8
     weeks = list(range(1,current_week + 1))
     year = 2022
     current_year = current_year_aggregate(current_week,weeks,year)
